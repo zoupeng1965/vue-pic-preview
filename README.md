@@ -6,16 +6,10 @@ Vue preview plugin
 此插件并没有提供新的功能, 只是在原vue-preview插件基础之上简化了操作, 无需使用vue-preview组件, 直接使用img标签绑定点击事件即可
 
  
-
-Requirements
-PhotoSwipe
-
-Based on
-vue-preview
-
 Installation
-npm i vue-pic-preview -S
-Usage
+ npm i vue-pic-preview -S
+ 
+ Usage
 使用须知：
 
 插件目前仅支持vue2.0以上版本
