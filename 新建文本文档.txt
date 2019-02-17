@@ -1,0 +1,38 @@
+1 npm i vue-pic-preview -S
+
+2如果你是使用vue-cli生成的项目，可能需要你修改webpack.base.conf.js文件中的loaders，添加一个loader。
+
+原因：插件编写中使用了es6的语法，需要进行代码编译
+
+{
+    test: /vue-preview.src.*?js$/,
+    loader: 'babel'
+}
+
+3
+import VuePreview from 'vue-pic-preview'
+Vue.use(VuePreview)
+
+4Examples
+
+<template>
+  <img class="preview-img" v-for="(item, index) in list" :src="item.src" height="100" @click="$preview.open(index, list)">
+</template>
+
+<script>
+export default {
+    data () {
+      return {
+        list: [{
+          src: 'https://placekitten.com/600/400',
+          w: 600,
+          h: 400
+        }, {
+          src: 'https://placekitten.com/1200/900',
+          w: 1200,
+          h: 900
+        }]
+      }
+    }
+  }
+</script>
